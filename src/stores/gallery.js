@@ -1,5 +1,6 @@
 import request from 'superagent'
 import examples from './examples.json'
+import { BEN_INITIAL_CODE } from './ben-startup.js'
 const sketches = []
 
 const license = `// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/`
@@ -128,7 +129,9 @@ export default class Gallery {
       this.code = this.decodeBase64(base64Code)
       this.foundSketch = true
     } else {
-      this.setRandomSketch()
+      // XXX(ben): instead of loading random sketch, load ben boilerplate
+      this.code = BEN_INITIAL_CODE;
+      this.foundSketch = true
     }
     callback(this.code, this.foundSketch)
   }
