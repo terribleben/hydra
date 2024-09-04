@@ -71,7 +71,8 @@ export default function store(state, emitter) {
   //loadLanguageFromURL('es','https://hackmd.io/baEnGh7gRt2iHTvt-TT8Fw/download')
   function loadLanguageFromURL(lang = 'es', path) {
     const css = "color: purple; background: orange; font-size: 14px;padding:10px"
-    console.log(`%cloading translation for ${lang} from ${path}`, css);
+    // XXX(ben): skipping localization helps boot offline
+    /* console.log(`%cloading translation for ${lang} from ${path}`, css);
     fetch(path)
       .then(res => {
         if (!res.ok) {
@@ -93,7 +94,7 @@ export default function store(state, emitter) {
         const languages = {}
         updateAvailableLanguages()
         emitter.emit('render')
-      })
+      }) */
   }
   // const path = `${window.location.origin}/locales/es.json`
 
