@@ -8,7 +8,7 @@ const init = (el) => {
 }
 const log = (msg, className = "") => {
   console.log('logging', msg, className)
-  if (logElement) logElement.innerHTML = ` >> <span class=${className}> ${msg} </span> `
+  if (logElement) logElement.innerHTML = `<span class=${className}> ${msg} </span> `
 }
 const hide = () => {
   if (logElement) logElement.style.display = 'none'
