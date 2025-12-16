@@ -1,6 +1,7 @@
 export const BEN_INITIAL_CODE = `
 await loadScript('/extensions/hydra-arithmetics.js')
 await loadScript('/extensions/hydra-midi.js')
+await loadScript('/extensions/hydra-convolutions.js')
 await loadScript('/extensions/hydra-nonlinear-time.js')
 await midi.start({ input: '*', channel: '*' })
 
